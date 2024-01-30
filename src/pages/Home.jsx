@@ -257,7 +257,7 @@ function Home() {
       image: 'url',
     },
     {
-      title: 'Lomo Saltado',
+      title: 'Lomo Saltado2',
       difficulty: 5,
       category: 'dinner',
       cuisine: 'Puruvian ',
