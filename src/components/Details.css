@@ -1,0 +1,55 @@
+.Details {
+  background-color: #242145;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1rem;
+  text-align: justify;
+  width: fill;
+}
+
+.DetailHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.DetailImage {
+  height: 300px;
+  width: 100%;
+  background-color: lightgray;
+}
+.DetailHeaderInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 1rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.264);
+}
+
+.DetailsContents {
+  display: flex;
+  flex-direction: row;
+}
+.DetailContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  padding: 1rem;
+  flex: 1;
+}
+.DetailDescription {
+  word-wrap: break-word;
+  overflow: hidden;
+}
+.DetailContentItems {
+  width: 100%;
+  margin-left: 1rem;
+}
+.DetailContentItem {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.264);
+}
