@@ -3,11 +3,20 @@ import Details from '../components/Details';
 import FourButtons from '../components/FourButtons';
 import CardGrid from '../components/CardGrid';
 import './Home.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Home() {
-  const [selected, setSelected] = useState(false);
+  // const [selected, setSelected] = useState(false);
+  const [meals, setMeals] = useState();
 
+  useEffect(() => {
+    fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+      .then((response) => response.json())
+
+      .then((data) => setMeals(data));
+  }, []);
+
+  console.log('meals', meals);
   const data = [
     {
       title: 'Mapo Tofu',
@@ -271,18 +280,16 @@ function Home() {
     },
   ];
 
-  function clickHandler(value) {
-    // setSelected(data.filter((item) => item.title === value));
-    const set = data.filter((item) => item.title === value);
-    // console.log('selected', set);
-    setSelected(set[0]);
-    console.log('selected', selected);
-  }
+  // function clickHandler(value) {
+  //   // setSelected(data.filter((item) => item.title === value));
+  //   const set = data.filter((item) => item.title === value);
+  //   // console.log('selected', set);
+  //   setSelected(set[0]);
+  //   console.log('selected', selected);
+  // }
   return (
     <div className="Home">
-      <CardGrid data={data} onClick={clickHandler}></CardGrid>
-
-      {selected && <Details selected={selected}></Details>}
+      <CardGrid data={data}></CardGrid>
     </div>
   );
 }
