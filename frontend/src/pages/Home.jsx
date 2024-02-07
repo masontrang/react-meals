@@ -288,7 +288,7 @@ function Home() {
   //   console.log('selected', selected);
   // }
   return (
-    <div className="Home">
+    <div className="Page">
       <CardGrid data={data}></CardGrid>
     </div>
   );

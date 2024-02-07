@@ -1,0 +1,22 @@
+.Form {
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.label {
+  width: 100%;
+  background-color: red;
+  /* flex: 1; */
+  display: flex;
+  align-items: space-between;
+}
+
+.input {
+  flex: 2;
+  /* width: 100%; */
+}

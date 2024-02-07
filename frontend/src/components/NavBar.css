@@ -1,0 +1,9 @@
+.NavBar {
+  max-width: 15vw;
+  flex: 2;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: flex-start;
+}
